@@ -1,0 +1,39 @@
+<!-- inc:head -->
+<section class="main animated fadeInDown">
+	<div class="main-box">
+		<div class="client my-client-title">
+			<ul class="rb-row fn-clear">
+				<li>姓名</li>
+				<li>意向楼盘</li>
+				<li>电话</li>
+				<li>状态</li>
+			</ul>
+		</div>
+		<div class="client my-client-list">
+			<!-- $rslist AS $k=>$v -->
+			<a href="{:site_url('customer,view')}id={:$v[id]}" class="rb-row my-client">
+			<ul class="fn-clear">
+				<li>{:$v[username]}</li>
+				<li>{:$v[proname]}</li>
+				<li>{:$v[cellphone]}</li>
+				<li><span class="visit">{if($v[status]==1)}已预约{elseif($v[status]==2)}已过期{else}未审核{end}</span></li>
+			</ul>
+			</a>
+			<!-- end -->
+		</div>
+		<div class="recommend-tips">
+			<!-- if($pagelist && is_array($pagelist) && count($pagelist)>0) -->
+			<ul class="pagination">
+				<!-- $pagelist AS $key=>$value -->
+				<li><a href="{:$value[url]}" class="{:$value[status] ? 'm' : 'n'}">{:$value[name]}</a></li>
+				<!-- end -->
+			</ul>
+			<!-- end -->
+		</div>
+		<div class="recommend-tips">
+			<h6>提示</h6>
+			<p>具体判客规则以“活动细则”里的相关说明为准！</p>
+		</div>
+	</div>
+</section>
+<!-- inc:foot -->

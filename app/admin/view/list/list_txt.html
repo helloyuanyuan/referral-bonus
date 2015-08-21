@@ -1,0 +1,55 @@
+<div class="main">
+<table width="100%" style="layout:fixed;" cellpadding="0" cellspacing="0">
+<tr>
+	<td class="t_sub" width="33px">&nbsp;</td>
+	<td class="t_sub" width="30px">状态</td>
+	<!-- if($ifcate) -->
+	<td class="t_sub" width="120px">分类名称</td>
+	<!-- end -->
+	<td class="t_sub">{:$m_rs[title_nickname] ? $m_rs[title_nickname] : '主题'}</td>
+	<!-- if($m_rs[if_biz]) -->
+		<td class="t_sub" width="100px">售价（RMB）</td>
+	<!-- end -->
+	<!-- $mlist AS $key=>$value -->
+		<td class="t_sub">{:$value}</td>
+	<!-- end -->
+	<td class="t_sub" width="120px">发布时间</td>
+	<td class="t_sub" width="50px">排序</td>
+	<td class="t_sub" width="{:$m_rs[if_reply] ? '65' : '45'}px">操作</td>
+</tr>
+<!-- $rslist AS $key=>$value -->
+<tr class="tr_out" onMouseOver="over_tr(this)" onMouseOut="out_tr(this)">
+	<td align='center' class="tc_left"><input type="checkbox" value="{:$value[id]}" /></td>
+	<td align="center" class="tc_right" id="status_{:$value[id]}"><a href="javascript:status({:$value[id]},{:intval($value[status])});void(0);" class="status{:intval($value[status])}"></a></td>
+	<!-- if($ifcate) -->
+	<td align="center" class="tc_right">{:$value[cate_name] ? $value[cate_name] : '-'}</td>
+	<!-- end -->
+	<td align='left' class="tc_right">
+		<div style="padding:2px 5px;">
+			【{:$value[id]}】
+			<span style="{:$value[style]}">{:$value[title]}</span>
+			<!-- if($value[thumb]) --><a href="javascript:phpjs_preview('{:$value[thumb_id]}');void(0);" title="点击查看大图"><span class="darkred">【图片】</span></a><!-- end -->
+			<!-- if($value[virtual]) --> <span class="red">虚拟产品</span><!-- end -->
+			<!-- if($value[istop]) --> <span class="red">[顶]</span><!-- end -->
+			<!-- if($value[isvouch]) --> <span class="darkblue">[荐]</span><!-- end -->
+			<!-- if($value[isbest]) --> <span class="darkred">[精]</span><!-- end -->
+			<!-- if($value[identifier]) --><span class="clue_on">【{:$value[identifier]}】</span><!-- end -->
+		</div>
+	</td>
+	<!-- if($m_rs[if_biz]) -->
+		<td align="center" class="tc_right">{:$value[free] ? '免费' : $value[price]} <!-- if($value[ifspecial] && !$value[free]) --><span style="color:red;">特价</span><!-- end --></td>
+	<!-- end -->
+	<!-- $mlist AS $k=>$v -->
+		<td  align="center" class="tc_right">{:$value[$k]}</td>
+	<!-- end -->
+	<td  align="center" class="tc_right">{:date('Y-m-d H:i',$value[post_date])}</td>
+	<td  align="center" class="tc_right"><input type="text" class="center" style="width:40px;" id="taxis_{:$value[id]}" value="{:$value[taxis]}" /></td>
+	<td align="center" class="tc_right">
+		<!-- if($m_rs[if_reply]) --><a href="{:site_url('reply')}tid={:$value[id]}" class="btn reply" title="留言"></a><!-- end -->
+		<a href="{:site_url('list,set')}id={:$value[id]}" class="btn edit" title="编辑"></a>
+		<a href="javascript:del({:$value['id']});void(0);" class="btn del" title="删除"></a>
+	</td>
+</tr>
+<!-- end -->
+</table>
+</div>

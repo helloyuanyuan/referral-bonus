@@ -1,0 +1,32 @@
+<!-- inc:head -->
+<section class="main animated">
+	<div class="main-box jjr-edit-info">
+		<div class="rb-row fn-clear">
+			<p class="info-title">姓名</p>
+			<p class="info-value"><input type="text" id="username" placeholder="姓名" value="{:$rs[username]}" class="input" /></p>
+		</div>
+		<div class="rb-row fn-clear">
+			<p class="info-title">手机</p>
+			<p class="info-value"><input type="tel" id="phone" placeholder="手机" value="{:$rs[phone]}" class="input" readonly /></p>
+		</div>
+        <div class="rb-row fn-clear">
+                <p class="info-title">注册身份</p>
+                <p class="info-value rb-select">
+                 <select id="job" class="select">
+                        <option value="">选择您的职业</option>
+                        <option value="GSYG"{if($rs[job]=='GSYG')} selected='selected'{end}>公司员工</option>
+						<option value="WXFS"{if($rs[job]=='WXFS')} selected='selected'{end}>大众经纪人</option>
+						<option value="ZJGS"{if($rs[job]=='ZJGS')} selected='selected'{end}>中介公司</option>
+						<option value="DLGS"{if($rs[job]=='DLGS')} selected='selected'{end}>代理公司</option>
+						<option value="HZHB"{if($rs[job]=='HZHB')} selected='selected'{end}>合作伙伴</option> 
+				</select><i class="icon-down-open-big"></i>
+                </p>
+            </div>
+		<div class="rb-row fn-clear">
+			<p class="info-title">公司名称</p>
+			<p class="info-value"><input type="text" id="company" placeholder="公司名称" value="{:$rs[company]}" class="input" /></p>
+		</div>
+		<p class="rb-submit"><input type="button" value="保存" class="btn confirm-btn-new" id="J_edit_save" /></p>
+	</div>
+</section>
+<!-- inc:foot -->

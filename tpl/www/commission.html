@@ -1,0 +1,58 @@
+<!-- inc:head -->
+<section class="main animated fadeInDown">
+	<div class="main-box">
+		<div class="commission-header fn-clear">
+			<div class="commission-box border-box">
+				<p>可结佣（税前）</p>
+				<p class="commission-text">{:$totalcur_wj}<span>元</span></p>
+			</div>
+			<div class="commission-box border-box">
+				<p>已结佣</p>
+				<p class="commission-text">{:$totalcur_yj}<span>元</span></p>
+			</div>
+		</div>
+        <a href="{:site_url('usercp,bank')}" class="rb-row bank-card fn-clear">
+        <i class="icon-credit-card"></i>
+        {if($rs[bankAccount] && $rs[cardCode] && $rs[bankName])}
+		<span>卡号&nbsp;&nbsp;&nbsp;{:$rs[cardCode]}</span>
+		{else}
+		<span>请绑定您的银行卡号</span>
+		{end}
+        <i class="icon-angle-right"></i>
+        </a>
+		
+		<div class="commission-detail">
+			<h6>账目明细</h6>
+		<div class="client my-client-title">
+			<ul class="rb-row fn-clear">
+				<li>客户</li>
+				<li>楼盘</li>
+				<li>类别</li>
+				<li>佣金</li>
+			</ul>
+		</div>
+		<div class="client my-client-list">
+			<!-- $rslist AS $k=>$v -->
+			<a class="rb-row my-client">
+			<ul class="fn-clear">
+				<li>{:$v[username]}</li>
+				<li>{:$v[proname]}</li>
+				<li>{:$v[ctype]}</li>
+				<li>{:$v[money]}</li>
+			</ul>
+			</a>
+			<!-- end -->
+		</div>
+		</div>
+		<div class="recommend-tips">
+			<!-- if($pagelist && is_array($pagelist) && count($pagelist)>0) -->
+			<ul class="pagination">
+				<!-- $pagelist AS $key=>$value -->
+				<li><a href="{:$value[url]}" class="{:$value[status] ? 'm' : 'n'}">{:$value[name]}</a></li>
+				<!-- end -->
+			</ul>
+			<!-- end -->
+		</div>
+	</div>
+</section>
+<!-- inc:foot -->

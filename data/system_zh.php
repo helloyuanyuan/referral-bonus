@@ -1,0 +1,41 @@
+<?php 
+$_sys["sitename"] = "云梦微信2.4房产经纪人";
+$_sys["seotitle"] = "云梦微信";
+$_sys["siteurl"] = "http://127.0.0.1/";
+$_sys["indexphp"] = "index.php";
+$_sys["keywords"] = "云梦微信房产经纪人";
+$_sys["description"] = "云梦微信房产经纪人";
+$_sys["logo"] = "upfiles/201409/23/d1716a42ce902731.jpg";
+$_sys["tj_title"] = "我要推荐";
+$_sys["kh_title"] = "我的客户";
+$_sys["yj_title"] = "我的佣金";
+$_sys["xz_title"] = "活动细则";
+$_sys["itemtitle"] = "在售项目";
+$_sys["copyright"] = "云梦微信@版权所有";
+$_sys["sharegift"] = "领5元话费升级金牌合伙人";
+$_sys["sharetips"] = "upfiles/201409/21/7e8b99a1eb4d8907.png";
+$_sys["sharegiftyes"] = "使用话费";
+$_sys["shareyeslink"] = "http://127.0.0.1/";
+$_sys["wx_link"] = "http://127.0.0.1/";
+$_sys["wx_title"] = "开启财富之旅—云梦微信全民经纪人";
+$_sys["wx_description"] = "调动你的社交关系，推荐客源，获丰厚佣金!";
+$_sys["wx_logo"] = "upfiles/201409/21/e0b6a40a8fd833a6.jpg";
+$_sys["smtp_server"] = "smtp.qq.com";
+$_sys["smtp_port"] = "25";
+$_sys["smtp_charset"] = "gbk";
+$_sys["smtp_ssl"] = "";
+$_sys["smtp_user"] = "admin2";
+$_sys["smtp_pass"] = "admin2";
+$_sys["smtp_reply"] = "569577348@qq.com";
+$_sys["smtp_admin"] = "569577348@qq.com";
+$_sys["smtp_fromname"] = "房产合伙人";
+$_sys["smtp_reg"] = "";
+$_sys["site_status"] = "1";
+$_sys["close_reason"] = "网站暂停关闭，有事请联系管理员";
+$_sys["reg_status"] = "1";
+$_sys["close_reg"] = "";
+$_sys["login_status"] = "1";
+$_sys["close_log"] = "";
+$_sys["site_type"] = "";
+
+ ?>

@@ -1,0 +1,22 @@
+<!-- inc:head -->
+<section class="main animated fadeInDown">
+	<div class="main-box">
+		<div class="rule-detail border-box">
+			<div style="text-align:center">{:$msg}</div>
+			<!-- if($error_url) -->
+			<p class="tc"><a href="{:$error_url}">{:$error_note}</a></p>
+			<!-- end -->
+		</div>
+	</div>
+</section>
+<!-- if($error_url) -->
+<script type="text/javascript">
+var micro_time = "{:$micro_time}";
+window.setTimeout("trefresh()",micro_time);
+function trefresh()
+{
+	direct("{:$error_url}");
+}
+</script>
+<!-- end -->
+<!-- inc:foot -->

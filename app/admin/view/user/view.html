@@ -1,0 +1,12 @@
+<!-- inc:header -->
+<div class="table"><div class="left">会员名：</div>{:$rs[username]} <!-- if(!$value[status]) --><span class="red">未审核</span><!-- end --></div>
+<div class="table"><div class="left">手机：</div>{:$rs[phone]}</div>
+<div class="table"><div class="left">银行户名：</div>{:$rs[bankAccount]}</div>
+<div class="table"><div class="left">银行卡号：</div>{:$rs[cardCode]}</div>
+<div class="table"><div class="left">银行名称：</div>{:$rs[bankName]}</div>
+<div class="table"><div class="left">注册时间：</div>{:date('Y-m-d H:i',$rs[regdate])}</div>
+<!-- if($rs[picture]) --><div class="table"><div class="left">照片：</div><img src="{:$rs[picture]}" width="80px" height="80px" /></div><!-- end -->
+
+<!-- $extlist AS $key=>$value --><div class="table"><div class="left">{:$value[title]}：</div>{:$value[val]}</div><!-- end -->
+
+<!-- inc:footer_open -->

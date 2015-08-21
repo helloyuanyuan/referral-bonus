@@ -1,0 +1,39 @@
+<style type="text/css">
+.listpic{margin:0;padding:0}
+.listpic li{float:left;width:19%;border:1px solid #0C5870;margin:5px 0 0 6px;list-style:none;}
+.listpic .l{height:20px;overflow:hidden;}
+.listpic .img{margin:3px 0;text-align:center;height:150px;overflow:hidden;}
+</style>
+<div class="main" style="border:0;">
+<ul class="listpic">
+	<!-- $rslist AS $key=>$value -->
+	<li><div onMouseOver="this.style.backgroundColor='#52EBC9'" onMouseOut="this.style.backgroundColor=''" style="padding:5px;cursor:default;">
+		<div class="img"><img src="{:$value[thumb] ? $value[thumb] : 'images/nopic.gif'}" border="0" onclick="phpjs_preview('{:$value[thumb_id]}')" class="hander" /></div>
+		<!-- if($ifcate) -->
+		<div><b>分类：</b>{:$value[cate_name] ? $value[cate_name] : '<span class="darkblue">未设置</span>'}</div>
+		<!-- end -->
+		<div class="l"><b>主题：</b><span style="{:$value[style]}">{:$value[title]}</span><!-- if($value[virtual]) --> <span class="red">虚拟产品</span><!-- end --><!-- if($value[istop]) --> <span class="red">[顶]</span><!-- end --><!-- if($value[isvouch]) --> <span class="darkblue">[荐]</span><!-- end --><!-- if($value[isbest]) --> <span class="darkred">[精]</span><!-- end --> <!-- if($value[identifier]) --><span class="clue_on">【{:$value[identifier]}】</span><!-- end --></div>
+		<!-- if($m_rs[if_biz]) -->
+		<div><b>售价：</b>{:$value[free] ? '免费' : $value[price]} <!-- if($value[ifspecial] && !$value[free]) --><span style="color:red;">特价</span><!-- end --></div>
+		<!-- end -->
+		<div><b>时间：</b>{:date('Y-m-d H:i',$value[post_date])}</div>
+		<!-- $mlist AS $k=>$v -->
+		<div class="l"><b>{:$v}：</b>{:$value[$k]}</div>
+		<!-- end -->
+		<div>
+			<table>
+			<tr>
+				<td><input type="checkbox" value="{:$value[id]}" /></td>
+				<td><input type="text" class="center" style="width:40px;" id="taxis_{:$value[id]}" value="{:$value[taxis]}" alt="排序" /></td>
+				<td><div id="status_{:$value['id']}"><a href="javascript:status({:$value[id]},{:intval($value['status'])});void(0);" class="status{:intval($value['status'])}"></a></div></td>
+				<!-- if($m_rs[if_reply]) --><td><a href="{:site_url('reply')}tid={:$value[id]}" class="btn reply" title="留言"></a></td><!-- end -->
+				<td><a href="{:site_url('list,set')}id={:$value[id]}" class="btn edit" title="编辑"></a></td>
+				<td><a href="javascript:del({:$value['id']});void(0);" class="btn del" title="删除"></a></td>
+			</tr>
+			</table>
+		</div>
+	</div></li>
+	<!-- end -->
+</ul>
+<div class="clear"></div>
+</div>

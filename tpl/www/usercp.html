@@ -1,0 +1,18 @@
+<!-- inc:head -->
+<section class="main animated fadeInDown">
+	<div class="main-box jjr-home">
+		<div class="sales-home-info">
+			<figure class="figure">
+				<img src="{if($rs[picture])}{:$rs[picture]}{else}images/header.png{end}" alt="{:$_SESSION[user_name]}" />
+			</figure>
+			<h5>{:$rs[username]}</h5>
+		</div>
+		<div class="jjr-info">
+			<div class="jjr-phone fn-clear"><p class="info-title">注册电话</p><p class="info-value">{:$rs[phone]}</p></div>
+			<div class="jjr-type fn-clear"><p class="info-title">注册身份</p><p class="info-value">{if($rs[job]=='GSYG')}公司员工{elseif($rs[job]=='WXFS')}大众经纪人{elseif($rs[job]=='ZJGS')}中介公司{elseif($rs[job]=='DLGS')}代理公司{elseif($rs[job]=='HZHB')}合作伙伴{end}</p></div>            
+			<div class="jjr-company fn-clear"><p class="info-title">公司名称</p><p class="info-value">{:$rs[company]}</p></div>
+			<a href="{:site_url('usercp,info')}" class="jjr-info-edit"><i class="icon-pencil"></i></a>
+		</div>
+	</div>
+</section>
+<!-- inc:foot -->

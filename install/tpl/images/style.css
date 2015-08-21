@@ -1,0 +1,62 @@
+body{padding:0;margin:0;font:normal 12px/14px "Arial","sans-serif","Tahoma"}
+a:link {color: #656565; text-decoration:none;}
+a:visited {color: #656565;text-decoration:none;}
+a:hover{color:#b3c900;text-decoration:none}
+a:active {color: #656565;}
+h3,h5{font:bold 12px/14px "Arial","sans-serif","Tahoma";padding:0;margin:0}
+img{border:0}
+
+.div_w{position:relative;width:930px;margin:0 auto;}
+.clear{clear:both;height:0px;}
+.m_top{margin-top:5px;}
+.m_bottom{margin-bottom:5px}
+.pd_5{padding:5px;}
+.space{height:5px;}
+.input_login{width:155px;}
+.red{color:darkred;}
+.f_right{float:right;}
+.f_left{float:left;}
+.img_selected{padding:1px;border:2px solid #5996E8;}
+.img_no_select{padding:1px;border:2px solid #FFFFFF;}
+.hand{cursor:pointer;}
+.small{font-size:11px;font-weight:normal;}
+.t_sub{text-align:center;}
+.tr_over{background-color:#F5F5F5;height:23px}
+.tr_out{height:23px}
+.table{margin:1px auto;clear:both;}
+.table .left{float:left;width:145px;*width:150px;text-align:right;*padding:3px 1px;}
+.table .right{float:left;text-align:left;padding:1px;width:540px;}
+.long_input{width:300px}
+.short_input{width:55px}
+.submit{padding:0px 4px;*padding:2px 4px 0 4px;font-size:12px;background-color:#ece9d8;border-width:1px;}
+
+button{margin:0;padding:0}
+button.btn {background:transparent none repeat scroll;cursor:pointer;margin:0;overflow:visible;padding:0;vertical-align:middle;border:0 none;}
+button.btn span, .btn span span {background-color:transparent;background-image:url("button.gif");background-repeat:no-repeat; border:0 none;}
+button.btn span {background-position:0;border:0 none;color:#C73615;cursor:pointer;display:inline-block;height:21px;margin:0;padding:0 0 0 10px;text-decoration:none;}
+button.btn span span {background-position:right; color:#C73615; display:inline-block; font:normal 12px/20px "Arial";height:20px;padding:0 15px 1px 5px; white-space:nowrap;}
+
+/* 公共头部信息 */
+.head{position:relative;top:0;left:0;background:url("top_bg.gif") repeat-x;height:92px;}
+.head .logo{position:absolute;top:16px;left:0px;width:230px;}
+.head .menu{position:absolute;top:48px;left:250px;}
+.foot{position:relative;background:url("foot_bg.gif") repeat-x;color:#ACACAC;line-height:150%;}
+
+.left{float:left;width:223px;}
+.right{float:right;width:700px;}
+/* 公共模块 */
+.model{border:1px #DDD solid;}
+.model .bg{background:url("div-bg.jpg") left top repeat-x;margin:1px;}
+.model h3{font-size:14px;height:30px;line-height:30px;padding-left:10px;}
+.model h3 span.more{float:right;padding-right:10px;padding-top:9px;}
+.model h5{font-size:14px;height:30px;line-height:30px;padding-left:10px;}
+.model h5 span.more{float:right;padding-right:10px;padding-top:9px;}
+.model .msg{line-height:150%;}
+.model .ul{list-style:none;margin:0;padding:0}
+.model .ul li{float:left;width:162px;margin-left:8px;margin-top:8px;line-height:150%;text-align:center;border:1px solid #DDD;background:#EEE;padding-bottom:5px;}
+.model .ul img{padding-top:15px;padding-bottom:5px;}
+.model .ol{list-style:none;margin:0;padding:0}
+.model .ol li{background:url("arrow.gif") left center no-repeat;height:21px;line-height:21px;padding-left:10px;margin-left:12px;}
+.model .ol li span.postdate{float:right;padding-right:10px;line-height:21px;}
+.model .link{list-style:none;margin:0;padding:0}
+.model .link li{float:left;margin-left:7px;width:88px;height:31px;overflow:hidden;margin-top:5px;white-space:nowrap;}
