@@ -1,6 +1,6 @@
-if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) != 'micromessenger' && navigator.userAgent.toLowerCase().match(/Windows Phone/i) != 'windows phone') {
-    window.location.href = '/';
-}
+//if (navigator.userAgent.toLowerCase().match(/MicroMessenger/i) != 'micromessenger' && navigator.userAgent.toLowerCase().match(/Windows Phone/i) != 'windows phone') {
+//    window.location.href = '/';
+//}
 
 KISSY.use('node,io', function(S, Node, IO) {
 	var $ = Node.all;
