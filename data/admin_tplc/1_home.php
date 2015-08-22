@@ -42,7 +42,7 @@
 </tr>
 <tr class="tr_out">
 	<td class="tc_left" height="25px">
-		&nbsp; &nbsp;服务器引挈： <span class="darkblue"><?php echo $_SERVER['SERVER_SOFTWARE'];?></span>
+		&nbsp; &nbsp;服务器引擎： <span class="darkblue"><?php echo $_SERVER['SERVER_SOFTWARE'];?></span>
 	</td>
 	<td class="tc_right">
 		&nbsp; &nbsp;PHP运行方式：<span class="darkblue"><?php echo php_sapi_name();?></span>

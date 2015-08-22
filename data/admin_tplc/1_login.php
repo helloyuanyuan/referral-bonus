@@ -12,7 +12,7 @@ input{border:1px #ddd solid;}
 </style>
 <div class="login">
 	<div>
-		<div class="f-right title-text">后台管理<br /></div>
+		<div class="f-right title-text">XX公司推荐系统后台管理<br /></div>
 		<img src="./app/admin/view/images/login-logo.gif">
 	</div>
 	<div>

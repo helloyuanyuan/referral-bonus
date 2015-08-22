@@ -1,7 +1,7 @@
 <?php
 //数据库类型
 $_db_config["type"] = "mysql";
-//连接数据库引挈
+//连接数据库引擎
 $_db_config["engine"] = "mysql";
 //数据库服务器
 $_db_config["host"] = "localhost";

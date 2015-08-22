@@ -1,7 +1,7 @@
 <?php
 $_view_config["engine"] = "et";
 
-//配置模板引挈参数
+//配置模板引擎参数
 $_view_config["config"]["tplid"] = 1;
 $_view_config["config"]["tpldir"] = APP."view";
 $_view_config["config"]["cache"] = ROOT."data/tpl_c";

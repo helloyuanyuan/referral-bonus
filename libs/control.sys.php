@@ -98,8 +98,8 @@ class Control
 	//加载View层管理
 	function view()
 	{
-		//模板引挈参数
-		//加载View层涉及到的模板引挈
+		//模板引擎参数
+		//加载View层涉及到的模板引擎
 		require_once(LIBS.'view.sys.php');
 		$V = new View();
 		return $V->run();

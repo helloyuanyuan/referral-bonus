@@ -1,2 +1,13 @@
 eclipse.preferences.version=1
+encoding//app/admin/view/admin/list.html=UTF-8
+encoding//app/admin/view/admin/set.html=UTF-8
+encoding//app/admin/view/attachment.html=UTF-8
+encoding//app/admin/view/home.html=UTF-8
+encoding//app/admin/view/login.html=UTF-8
+encoding//app/admin/view/mypass.html=UTF-8
+encoding//app/admin/view/setting.html=UTF-8
+encoding//app/admin/view/sql.html=UTF-8
+encoding//app/admin/view/sql_list.html=UTF-8
+encoding//app/admin/view/swfupload.html=UTF-8
+encoding//app/admin/view/upfiles.html=UTF-8
 encoding/<project>=UTF-8

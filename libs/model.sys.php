@@ -73,7 +73,7 @@ class Model
 		return true;
 	}
 
-	//运行连接数据库引挈
+	//运行连接数据库引擎
 	function run_db($data_file='database',$engine='db')
 	{
 		if(!$engine) $engine = 'db';
@@ -89,7 +89,7 @@ class Model
 		//加载数据库配置文件
 		include(APP_ROOT.$data_file.'.config.php');
 		$this->db_type = $_db_config['type'];//计算要加载的Model层对应的数据库类型
-		//加载数据库引挈
+		//加载数据库引擎
 		$db_file = LIBS.'db_engine/'.($_db_config['engine'] ? $_db_config['engine'] : $_db_config['type']).'.php';
 		if(!file_exists($db_file))
 		{

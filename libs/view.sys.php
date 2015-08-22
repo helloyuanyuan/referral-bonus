@@ -8,7 +8,7 @@ class View
 	var $db;
 	function __construct()
 	{
-		//如果有针对某应用层配置模板引挈，则加载这个应用，返之加载公共应用
+		//如果有针对某应用层配置模板引擎，则加载这个应用，返之加载公共应用
 		$view_config = file_exists(APP.'view.config.php') ? APP.'view.config.php' : APP_ROOT.'view.config.php';
 		if(!file_exists($view_config))
 		{
@@ -36,11 +36,11 @@ class View
 		$this->__construct();
 	}
 
-	//运行引挈
+	//运行引擎
 	function run()
 	{
 		include_once($this->tpl_engine);
-		//初始化引挈
+		//初始化引擎
 		$this->tpl = new $this->engine($this->configdata);
 		return $this->tpl;
 	}

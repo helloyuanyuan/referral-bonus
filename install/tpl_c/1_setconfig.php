@@ -107,7 +107,7 @@ function check()
 					<td width="160px" align="right">数据库类型：</td>
 					<td>
 						<select id="db_type" name="db_type" onchange="to_engine(this.value)">
-							<option value="mysql:mysql">MySQL（MySQL引挈）</option>
+							<option value="mysql:mysql">MySQL（MySQL引擎）</option>
 						</select>
 					</td>
 				</tr>
