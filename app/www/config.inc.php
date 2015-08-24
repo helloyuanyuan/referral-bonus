@@ -9,7 +9,7 @@ $config["function_trigger"] = "f";
 //Control应用目录触发参数
 $config["dir_trigger"] = "d";
 
-define("SYS_DOMAIN","yehnet.net");
+define("SYS_DOMAIN","YuanTest.net");
 
 //是否需要验证，验证为空时执行的参数
 define("SYS_IF_CHECKED",false);

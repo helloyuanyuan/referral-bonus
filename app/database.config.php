@@ -14,7 +14,7 @@ $_db_config["pass"] = "";
 //数据库名
 $_db_config["data"] = "referralbonus";
 //数据表前缀
-$_db_config["prefix"] = "yehnet_";
+$_db_config["prefix"] = "YuanTest_";
 //启用缓存
 //txt：文本缓存
 //mem：内存缓存

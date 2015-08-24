@@ -10,7 +10,7 @@ class db_mysql
 	var $data;
 	var $conn;
 	var $result;
-	var $prefix = "yehnet_";
+	var $prefix = "YuanTest_";
 	//返回结果集类型，默认是数字+字符
 	var $rs_type = MYSQL_ASSOC;
 	var $query_times = 0;#[查询时间]
@@ -33,7 +33,7 @@ class db_mysql
 		$this->user = $config['user'] ? $config['user'] : 'root';
 		$this->pass = $config['pass'] ? $config['pass'] : '';
 		$this->data = $config['data'] ? $config['data'] : '';
-		$this->prefix = $config['prefix'] ? $config['prefix'] : 'yehnet_';
+		$this->prefix = $config['prefix'] ? $config['prefix'] : 'YuanTest_';
 		if($this->data)
 		{
 			$ifconnect = $this->connect();

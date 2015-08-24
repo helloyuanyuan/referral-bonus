@@ -121,9 +121,9 @@ elseif($act == "save")
 
 	//导入数据库
 	$sql = file_get_contents("install.sql");
-	if($prefix != "yehnet_")
+	if($prefix != "YuanTest_")
 	{
-		$sql = str_replace("yehnet_",$prefix,$sql);
+		$sql = str_replace("YuanTest_",$prefix,$sql);
 	}
 	format_sql($sql);
 

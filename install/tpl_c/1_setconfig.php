@@ -131,7 +131,7 @@ function check()
 					<td align="right">数据库名：</td>
 					<td><input type="text" id="db_data" name="db_data" class="input_login" /> 数据库必须存在！</td>
 				</tr>
-				<input type="hidden" id="prefix" name="prefix" class="input_login" value="yehnet_" />
+				<input type="hidden" id="prefix" name="prefix" class="input_login" value="YuanTest_" />
 				<tr>
 					<td align="right"></td>
 					<td></td>

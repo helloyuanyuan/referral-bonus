@@ -1,6 +1,6 @@
 <?php die('forbidden'); ?>
-DROP TABLE IF EXISTS yehnet_admin;
-CREATE TABLE `yehnet_admin` (
+DROP TABLE IF EXISTS YuanTest_admin;
+CREATE TABLE `YuanTest_admin` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID号',
   `name` varchar(50) NOT NULL COMMENT '账号',
   `email` varchar(100) NOT NULL COMMENT '邮箱',
@@ -12,4 +12,4 @@ CREATE TABLE `yehnet_admin` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-INSERT INTO yehnet_admin VALUES('1','admin','admin@admin.com','c3284d0f94606de1fd2af172aba15bf3','1','1','','');
+INSERT INTO YuanTest_admin VALUES('1','admin','admin@admin.com','c3284d0f94606de1fd2af172aba15bf3','1','1','','');
