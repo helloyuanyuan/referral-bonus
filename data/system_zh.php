@@ -1,7 +1,7 @@
 <?php 
 $_sys["sitename"] = "ReferralBonus";
 $_sys["seotitle"] = "ReferralBonus";
-$_sys["siteurl"] = "http://ReferralBonus/";
+$_sys["siteurl"] = "http://localhost/";
 $_sys["indexphp"] = "index.php";
 $_sys["keywords"] = "ReferralBonus";
 $_sys["description"] = "ReferralBonus";
@@ -15,8 +15,8 @@ $_sys["copyright"] = "四川众业成科技有限公司@版权所有";
 $_sys["sharegift"] = "分享";
 $_sys["sharetips"] = "upfiles/201409/21/7e8b99a1eb4d8907.png";
 $_sys["sharegiftyes"] = "感谢分享！！";
-$_sys["shareyeslink"] = "http://192.168.0.109";
-$_sys["wx_link"] = "http://192.168.0.109";
+$_sys["shareyeslink"] = "http://localhost/";
+$_sys["wx_link"] = "http://localhost/";
 $_sys["wx_title"] = "ReferralBonus";
 $_sys["wx_description"] = "ReferralBonus";
 $_sys["wx_logo"] = "upfiles/201409/21/e0b6a40a8fd833a6.jpg";

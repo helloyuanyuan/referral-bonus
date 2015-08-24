@@ -12,7 +12,7 @@ $_db_config["user"] = "root";
 //数据库密码
 $_db_config["pass"] = "";
 //数据库名
-$_db_config["data"] = "referralbonus";
+$_db_config["data"] = "ReferralBonus";
 //数据表前缀
 $_db_config["prefix"] = "YuanTest_";
 //启用缓存
