@@ -1,19 +1,19 @@
-<!-- if($file_uptype == "swf") -->
+<?php if(!defined('PHPOK_SET')){die('<h3>Error...</h3>');}?><?php if($file_uptype == "swf"){?>
 <script type="text/javascript" src="libs/swfupload/swfupload.js"></script>
 <script type="text/javascript" src="libs/swfupload/swfupload.queue.js"></script>
 <script type="text/javascript" src="libs/swfupload/fileprogress.js"></script>
 <script type="text/javascript" src="libs/swfupload/handlers.js"></script>
-<!-- end -->
+<?php } ?>
 <div class="notice"><div class="p">
 	<table width="100%" cellpadding="0" cellspacing="0">
 	<tr>
 		<td><span class="lead">&nbsp;&raquo; 选择/上传</span></td>
-		<form method="post" action="{:$page_url}">
-		<td>时间：<input type="text" name="postdate" id="postdate" onfocus="show_date('postdate')" style="width:75px;" value="{:$postdate}"> 关键字：<input type="text" name="keywords" value="{:$keywords}" id="keywords" style="width:65px;"> <input type="submit" value="搜索"  class="btn2"></td>
+		<form method="post" action="<?php echo $page_url;?>">
+		<td>时间：<input type="text" name="postdate" id="postdate" onfocus="show_date('postdate')" style="width:75px;" value="<?php echo $postdate;?>"> 关键字：<input type="text" name="keywords" value="<?php echo $keywords;?>" id="keywords" style="width:65px;"> <input type="submit" value="搜索"  class="btn2"></td>
 		</form>
 		<td align="right">
 			<table cellpadding="0" cellspacing="0">
-			<form id="form1" action="{:$page_url}" method="post" enctype="multipart/form-data">
+			<form id="form1" action="<?php echo $page_url;?>" method="post" enctype="multipart/form-data">
 			<tr>
 				<td><div id="divStatus"></div></td>
 				<td>&nbsp;</td>
@@ -27,11 +27,11 @@
 	</tr>
 	</table>
 </div></div>
-<!-- if($file_uptype != "swf") -->
+<?php if($file_uptype != "swf"){?>
 <div class="notice"><div class="p">
 <table cellpadding="0" cellspacing="0">
-<form method="post" action="{:site_url('open,upok','','&')}" enctype="multipart/form-data">
-<input type="hidden" id="_go_back_url" name="_go_back_url" value="{:$page_url}" />
+<form method="post" action="<?php echo site_url('open,upok','','&');?>" enctype="multipart/form-data">
+<input type="hidden" id="_go_back_url" name="_go_back_url" value="<?php echo $page_url;?>" />
 <tr>
 	<td>&nbsp;&raquo; 上传附件：</td>
 	<td><input type="file" name="upload_file" id="upload_file" size="12"></td>
@@ -41,19 +41,19 @@
 </form>
 </table>
 </div></div>
-<!-- end -->
+<?php } ?>
 
 
 <div id="fsUploadProgress" class="swfupload_progress"></div>
-<!-- if($file_uptype == "swf") -->
+<?php if($file_uptype == "swf"){?>
 <script type="text/javascript">
 var settings = {
 	flash_url : "libs/swfupload/swfupload.swf",
-	upload_url: "{:site_url('open,upload','','&')}",
-	post_params: {"{:SYS_SESSION_ID}" : "{:$sys_app->session_lib->sessid()}"},
+	upload_url: "<?php echo site_url('open,upload','','&');?>",
+	post_params: {"<?php echo SYS_SESSION_ID;?>" : "<?php echo $sys_app->session_lib->sessid();?>"},
 	file_size_limit : "200 MB",
-	file_types : "{:$swfupload_filetype}",
-	file_types_description : "{:$swfupload_note}",
+	file_types : "<?php echo $swfupload_filetype;?>",
+	file_types_description : "<?php echo $swfupload_note;?>",
 	file_upload_limit : 100,
 	file_queue_limit : 0,
 	custom_settings : {
@@ -63,7 +63,7 @@ var settings = {
 	debug: false,
 
 	// Button settings
-	button_image_url: "images/swfupload.png",
+	button_image_url: "./app/admin/view/images/swfupload.png",
 	button_placeholder_id : "spanButtonPlaceHolder",
 	button_width: "62",
 	button_height: "22",
@@ -81,4 +81,4 @@ var settings = {
 };
 swfu = new SWFUpload(settings);
 </script>
-<!-- end -->
+<?php } ?>

@@ -1,16 +1,16 @@
-<!-- inc:header -->
-<!-- if($file_uptype == "swf") -->
+<?php if(!defined('PHPOK_SET')){die('<h3>Error...</h3>');}?><?php $APP->tpl->p("header","","0");?>
+<?php if($file_uptype == "swf"){?>
 <script type="text/javascript" src="libs/swfupload/swfupload.js"></script>
 <script type="text/javascript" src="libs/swfupload/swfupload.queue.js"></script>
 <script type="text/javascript" src="libs/swfupload/fileprogress.js"></script>
 <script type="text/javascript" src="libs/swfupload/handlers.js"></script>
-<!-- end -->
+<?php } ?>
 <div class="notice"><div class="p">
 	<table width="100%" cellpadding="0" cellspacing="0">
 	<tr>
 		<td width="150px">
 			<table cellpadding="0" cellspacing="0">
-			<form id="_phpok_action_upload" action="{:$page_url}" method="post" enctype="multipart/form-data">
+			<form id="_phpok_action_upload" action="<?php echo $page_url;?>" method="post" enctype="multipart/form-data">
 			<tr>
 				<td><span class="lead">&nbsp;&raquo; 附件列表</span></td>
 				<td><div id="divStatus"></div></td>
@@ -24,35 +24,35 @@
 		</td>
 		<td>
 			<table>
-			<form method="post" action="{:site_url('files')}">
+			<form method="post" action="<?php echo site_url('files');?>">
 			<tr>
 				<td>附件搜索：</td>
 				<td>
 					<select name="type" id="type">
 						<option value="">全部，不限</option>
-						<option value="img"{if($input_type == "img")} selected{end}>图片类</option>
-						<option value="video"{if($input_type == "video")} selected{end}>影音类</option>
-						<option value="download"{if($input_type == "download")} selected{end}>其他</option>
+						<option value="img"<?php if($input_type == "img"){?> selected<?php } ?>>图片类</option>
+						<option value="video"<?php if($input_type == "video"){?> selected<?php } ?>>影音类</option>
+						<option value="download"<?php if($input_type == "download"){?> selected<?php } ?>>其他</option>
 					</select>
 				</td>
 				<td>上传时间：</td>
-				<td><input type="text" name="postdate" id="postdate" onfocus="show_date('postdate')" style="width:75px;" value="{:$postdate}"></td>
+				<td><input type="text" name="postdate" id="postdate" onfocus="show_date('postdate')" style="width:75px;" value="<?php echo $postdate;?>"></td>
 				<td>&nbsp; 关键字：</td>
-				<td><input type="text" name="keywords" value="{:$keywords}" id="keywords"></td>
+				<td><input type="text" name="keywords" value="<?php echo $keywords;?>" id="keywords"></td>
 				<td><input type="submit" value="搜索" class="btn2"></td>
 			</tr>
 			</form>
 			</table>
 		</td>
-		<td align="right"><a href="{:site_url('files,set')}" class="button">附件设置</a></td>
+		<td align="right"><a href="<?php echo site_url('files,set');?>" class="button">附件设置</a></td>
 	</tr>
 	</table>
 </div></div>
-<!-- if($file_uptype != "swf") -->
+<?php if($file_uptype != "swf"){?>
 <div class="notice"><div class="p">
 <table cellpadding="0" cellspacing="0">
-<form method="post" action="{:site_url('open,upok','','&')}" enctype="multipart/form-data">
-<input type="hidden" id="_go_back_url" name="_go_back_url" value="{:$page_url}" />
+<form method="post" action="<?php echo site_url('open,upok','','&');?>" enctype="multipart/form-data">
+<input type="hidden" id="_go_back_url" name="_go_back_url" value="<?php echo $page_url;?>" />
 <tr>
 	<td>&nbsp;&raquo; 上传附件：</td>
 	<td><input type="file" name="upload_file" id="upload_file" size="12"></td>
@@ -62,7 +62,7 @@
 </form>
 </table>
 </div></div>
-<!-- end -->
+<?php } ?>
 <div id="fsUploadProgress" class="swfupload_progress"></div>
 <div class="main">
 <table width="100%" style="layout:fixed;" cellpadding="0" cellspacing="0">
@@ -71,30 +71,30 @@
 	<td class="t_sub" width="50%">名称</td>
 </tr>
 <tr>
-	<!-- $rslist AS $key=>$value -->
-	<!-- run:$ftype = ROOT."images/filetype-large/".$value[ftype].".jpg" -->
-	<!-- run:$thumb = file_exists($ftype) ? $value[ftype] : "unknown" -->
-	<td class="{:($key)%2=='' ? 'tc_left' : 'tc_right'}">
+	<?php $_i=0;$rslist=(is_array($rslist))?$rslist:array();foreach($rslist AS  $key=>$value){$_i++; ?>
+	<?php $ftype = ROOT."./app/admin/view/images/filetype-large/".$value[ftype].".jpg";?>
+	<?php $thumb = file_exists($ftype) ? $value[ftype] : "unknown";?>
+	<td class="<?php echo ($key)%2=='' ? 'tc_left' : 'tc_right';?>">
 		<table width="100%" onMouseOver="over_tr(this)" onMouseOut="out_tr(this)">
 		<tr>
-			<td align="center" width="90px" height="90px"><a href="javascript:phpjs_preview({:$value[id]});void(0);"><!-- if($value[thumb]) --><img src="{:$value[thumb]}" width="80px" height="80px" /><!-- else --><img src="images/filetype-large/{:$thumb}.jpg" width="80px" height="80px" /><!-- end --></a></td>
+			<td align="center" width="90px" height="90px"><a href="javascript:phpjs_preview(<?php echo $value[id];?>);void(0);"><?php if($value[thumb]){?><img src="<?php echo $value[thumb];?>" width="80px" height="80px" /><?php }else{ ?><img src="./app/admin/view/images/filetype-large/<?php echo $thumb;?>.jpg" width="80px" height="80px" /><?php } ?></a></td>
 			<td>
-				<!-- if($thumb == "flv") -->
-				<div>封面：<input type="text" id="flv_pic_{:$value[id]}" value="{:$value[flv_pic]}" style="width:180px" /> <input type="button" value="选择" class="btn2" onclick="phpjs_onepic('flv_pic_{:$value[id]}')" /> <input type="button" class="btn2" value="清空" onclick="phpjs_onepic_clear('flv_pic_{:$value[id]}')">
+				<?php if($thumb == "flv"){?>
+				<div>封面：<input type="text" id="flv_pic_<?php echo $value[id];?>" value="<?php echo $value[flv_pic];?>" style="width:180px" /> <input type="button" value="选择" class="btn2" onclick="phpjs_onepic('flv_pic_<?php echo $value[id];?>')" /> <input type="button" class="btn2" value="清空" onclick="phpjs_onepic_clear('flv_pic_<?php echo $value[id];?>')">
 				</div>
-				<div style="padding-top:5px;">名称：<input type="text" id="tmpname_{:$value[id]}" value="{:$value[title] ? $value[title] : basename($value[filename])}" style="width:180px" /> <input type="button" value="提交" onclick="update_name({:$value[id]});" class="btn2" /></div>
-				<!-- else -->
-				<div>名称：<input type="text" id="tmpname_{:$value[id]}" value="{:$value[title] ? $value[title] : basename($value[filename])}" style="width:180px" /> <input type="button" value="改名" onclick="update_name({:$value[id]});" class="btn2" /></div>
-				<!-- end -->
-				<div style="padding-top:5px;">时间：{:date("Y-m-d H:i:s",$value[postdate])}</div>
+				<div style="padding-top:5px;">名称：<input type="text" id="tmpname_<?php echo $value[id];?>" value="<?php echo $value[title] ? $value[title] : basename($value[filename]);?>" style="width:180px" /> <input type="button" value="提交" onclick="update_name(<?php echo $value[id];?>);" class="btn2" /></div>
+				<?php }else{ ?>
+				<div>名称：<input type="text" id="tmpname_<?php echo $value[id];?>" value="<?php echo $value[title] ? $value[title] : basename($value[filename]);?>" style="width:180px" /> <input type="button" value="改名" onclick="update_name(<?php echo $value[id];?>);" class="btn2" /></div>
+				<?php } ?>
+				<div style="padding-top:5px;">时间：<?php echo date("Y-m-d H:i:s",$value[postdate]);?></div>
 				<div style="padding-top:5px;">
 					<table cellpadding="0" cellspacing="0">
 					<tr>
-						<td><input type="checkbox" value="{:$value[id]}" /></td>
-						<td><a href="javascript:update_one({:$value['id']});void(0);" class="btn pic_gd" title="更新图片规格"></a></td>
-						<td><a href="javascript:copy_url({:$value['id']});void(0);" class="btn piclink" title="链接"></a></td>
-						<td><a href="javascript:to_delete({:$value['id']});void(0);" class="btn pic_del" title="删除"></a></td>
-						<td id="notice_{:$value[id]}" style="color:darkblue;"></td>
+						<td><input type="checkbox" value="<?php echo $value[id];?>" /></td>
+						<td><a href="javascript:update_one(<?php echo $value['id'];?>);void(0);" class="btn pic_gd" title="更新图片规格"></a></td>
+						<td><a href="javascript:copy_url(<?php echo $value['id'];?>);void(0);" class="btn piclink" title="链接"></a></td>
+						<td><a href="javascript:to_delete(<?php echo $value['id'];?>);void(0);" class="btn pic_del" title="删除"></a></td>
+						<td id="notice_<?php echo $value[id];?>" style="color:darkblue;"></td>
 					</tr>
 					</table>
 				</div>
@@ -102,8 +102,8 @@
 		</tr>
 		</table>
 	</td>
-	<!-- row:2 -->
-	<!-- end -->
+	<?php if($_i%2===0){echo '</tr><tr>';}?>
+	<?php } ?>
 </tr>
 </table>
 </div>
@@ -120,19 +120,19 @@
 			&nbsp;
 			<input type="button" value="批量删除" onclick="del_pl()" class="btn4">
 		</td>
-		<td align="right">{:$pagelist}</td>
+		<td align="right"><?php echo $pagelist;?></td>
 	</tr>
 	</table>
 </div>
 <script type="text/javascript">
-var page_url = "{:$page_url}";
+var page_url = "<?php echo $page_url;?>";
 </script>
-<!-- if($file_uptype == "swf") -->
+<?php if($file_uptype == "swf"){?>
 <script type="text/javascript">
 var settings = {
 	flash_url : "libs/swfupload/swfupload.swf",
-	upload_url: "{:site_url('open,upload','','&')}",
-	post_params: {"{:SYS_SESSION_ID}" : "{:$sys_app->session_lib->sessid()}"},
+	upload_url: "<?php echo site_url('open,upload','','&');?>",
+	post_params: {"<?php echo SYS_SESSION_ID;?>" : "<?php echo $sys_app->session_lib->sessid();?>"},
 	file_size_limit : "500 MB",
 	file_types : "*.*",
 	file_types_description : "全部文件",
@@ -145,7 +145,7 @@ var settings = {
 	debug: false,
 
 	// Button settings
-	button_image_url: "images/swfupload.png",
+	button_image_url: "./app/admin/view/images/swfupload.png",
 	button_placeholder_id : "spanButtonPlaceHolder",
 	button_width: "62",
 	button_height: "22",
@@ -163,7 +163,7 @@ var settings = {
 };
 swfu = new SWFUpload(settings);
 </script>
-<!-- end -->
+<?php } ?>
 <script type="text/javascript">
 function update_one(id)
 {
@@ -286,4 +286,4 @@ function copy_url(id)
 	Layer.init(url,630,500);
 }
 </script>
-<!-- inc:footer -->
+<?php $APP->tpl->p("footer","","0");?>
