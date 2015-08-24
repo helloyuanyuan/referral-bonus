@@ -41,7 +41,7 @@ CREATE TABLE `YuanTest_admin` (
 
 LOCK TABLES `YuanTest_admin` WRITE;
 /*!40000 ALTER TABLE `YuanTest_admin` DISABLE KEYS */;
-INSERT INTO `YuanTest_admin` VALUES (1,'admin','admin@admin.com','c3284d0f94606de1fd2af172aba15bf3',1,1,'','');
+INSERT INTO `YuanTest_admin` VALUES (1,'YuanAdmin','YuanAdmin@YuanAdmin.com','c3284d0f94606de1fd2af172aba15bf3',1,1,'','');
 /*!40000 ALTER TABLE `YuanTest_admin` ENABLE KEYS */;
 UNLOCK TABLES;
 

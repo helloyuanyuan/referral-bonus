@@ -132,7 +132,7 @@ elseif($act == "save")
 	$admin_pass = safe_html($admin_pass);
 	$sql = "TRUNCATE TABLE `".$prefix."admin`";
 	$db->query($sql);
-	$sql = "INSERT INTO ".$prefix."admin(name,email,pass,status,if_system,popedom) VALUES('".$admin_user."','admin@admin.com','".sys_md5($admin_pass)."','1','1','')";
+	$sql = "INSERT INTO ".$prefix."admin(name,email,pass,status,if_system,popedom) VALUES('".$admin_user."','YuanAdmin@YuanAdmin.com','".sys_md5($admin_pass)."','1','1','')";
 	$db->query($sql);
 
 	@touch("lock.php");

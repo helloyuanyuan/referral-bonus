@@ -12,4 +12,4 @@ CREATE TABLE `YuanTest_admin` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
-INSERT INTO YuanTest_admin VALUES('1','admin','admin@admin.com','c3284d0f94606de1fd2af172aba15bf3','1','1','','');
+INSERT INTO YuanTest_admin VALUES('1','YuanAdmin','YuanAdmin@YuanAdmin.com','c3284d0f94606de1fd2af172aba15bf3','1','1','','');
