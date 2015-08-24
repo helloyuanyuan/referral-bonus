@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-08-24 07:40:08
+-- Generation Time: 2015-08-24 08:09:54
 -- 服务器版本： 5.6.25
 -- PHP Version: 5.6.11
 
@@ -520,7 +520,7 @@ INSERT INTO `yuantest_module` (`id`, `group_id`, `langid`, `identifier`, `title`
 (11, 1, 'zh', 'gd', '图片设置', '', 'gd', 1, 11, 0, 0, 0, 0, 0, '7,4', 0, 0, 0, 0, '', 0, 0, 0, 0, '', 30, 0, '', '', '', '', 'list', '', '', '', 0, 1, 1, 1, 1, ''),
 (4, 3, 'zh', 'files', '附件管理', '', 'files', 1, 4, 0, 0, 0, 0, 0, '7,6', 0, 0, 0, 0, '', 0, 0, 0, 0, '', 30, 0, '', '', '', '', 'list', '', '', '', 0, 1, 1, 1, 1, ''),
 (1, 0, 'zh', 'home', '后台首页', '', 'home', 1, 1, 0, 0, 0, 0, 0, '', 0, 0, 0, 0, '', 0, 0, 0, 0, '', 30, 0, '', '', '', '', 'list', '', '', '', 0, 1, 1, 1, 1, ''),
-(12, 1, 'zh', 'phpoksql', '数据备份', '', 'phpoksql', 1, 12, 0, 0, 0, 0, 0, '7,8', 0, 0, 0, 0, '', 0, 0, 0, 0, '', 30, 0, '', '', '', '', 'list', '', '', '', 0, 1, 1, 1, 1, ''),
+(12, 1, 'zh', 'phpoksql', '数据备份', '', 'phpoksql', 0, 12, 0, 0, 0, 0, 0, '7,8', 0, 0, 0, 0, '', 0, 0, 0, 0, '', 30, 0, '', '', '', '', 'list', '', '', '', 0, 1, 1, 1, 1, ''),
 (5, 6, 'zh', 'usergroup', '会员组别', '', 'usergroup', 1, 5, 0, 0, 0, 0, 0, '7,3,4,6', 0, 0, 0, 0, '', 0, 0, 0, 0, '', 30, 0, '', '', '', '', 'list', '', '', '', 0, 1, 1, 1, 1, ''),
 (17, 6, 'zh', 'excel_user', '导出会员', '', 'excel_user', 1, 17, 0, 0, 0, 0, 0, '7', 0, 0, 0, 0, '', 0, 0, 0, 0, '', 30, 0, '', '', '', '', 'list', '', '', '', 0, 1, 1, 1, 1, '');
 
@@ -611,7 +611,8 @@ CREATE TABLE IF NOT EXISTS `yuantest_session` (
 --
 
 INSERT INTO `yuantest_session` (`id`, `data`, `lasttime`) VALUES
-('j89204i105e87frl6a2hgfvuh1', 'sys_lang_id|s:2:"zh";admin_id|s:1:"1";admin_name|s:9:"YuanAdmin";admin_realname|s:9:"YuanAdmin";admin_md5|s:32:"9f4b1d03db9ccbd35d0196add001dfcc";', 1440394633);
+('j89204i105e87frl6a2hgfvuh1', 'sys_lang_id|s:2:"zh";admin_id|s:1:"1";admin_name|s:9:"YuanAdmin";admin_realname|s:9:"YuanAdmin";admin_md5|s:32:"9f4b1d03db9ccbd35d0196add001dfcc";', 1440394633),
+('aii4a4jr4d6pnmcuk60mchik96', 'sys_lang_id|s:2:"zh";admin_id|s:1:"1";admin_name|s:9:"YuanAdmin";admin_realname|s:9:"YuanAdmin";admin_md5|s:32:"9f4b1d03db9ccbd35d0196add001dfcc";', 1440396565);
 
 -- --------------------------------------------------------
 
